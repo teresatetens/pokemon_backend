@@ -10,7 +10,7 @@ app.use(cors());
 app.use(morgan('common'));
 
 app.get('/', (req, res)=>{
-    res.send('Server is running')
+    res.send('Henry Kene Teresa are running')
 })
 app.get('/pokemon', (req, res, next)=>{
     res.send(jsonData)    
