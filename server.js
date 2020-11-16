@@ -15,7 +15,7 @@ app.use(morgan('common'));
 // })
 app.get('/pokemon', (req, res, next)=>{
 
-    const promiseOfBen = pokedex.slice(0, 25).map( async (poke)=>{
+    const promiseOfBen = pokedex.slice(0, 28).map( async (poke)=>{
         return await axios.get(`https://pokeapi.co/api/v2/pokemon/${poke.name.english.toLowerCase()}/`)
     })
     Promise.all(promiseOfBen).then((resolvedData)=>{
