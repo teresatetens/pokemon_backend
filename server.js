@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(morgan('common'));
 
-// app.get('/', (req, res)=>{
-//     res.send('Henry Kene Teresa Ben are running')
-// })
+app.get('/', (req, res)=>{
+    res.send('Henry Kene Teresa Ben are running')
+})
 app.get('/pokemon', (req, res, next)=>{
 
     const promiseOfBen = pokedex.slice(0, 28).map( async (poke)=>{
